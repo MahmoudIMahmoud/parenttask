@@ -24,6 +24,7 @@ public class TestItWorks extends TestBase{
 		sideMenu = new SideMenu(driver);
 		calenderPage = new CalenderPage(driver);
 		newEventPage = new NewEventPage(driver);
+		login.baseUrl=siteUrl;
 	}
 	
 	@Test

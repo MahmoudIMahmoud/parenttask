@@ -10,7 +10,7 @@ public class LoginPage extends PageBase {
 	private By btnLogin = By.id(LoginLocators.getString("LoginPage.btnLogin")); //$NON-NLS-1$
 	public LoginPage(WebDriver driver) {
 		super(driver);
-		//this.driver = driver;
+		//this.driv = driver;
 	}
 	public void  navigateToLogin(){
 		driver.get(baseUrl );//+ LoginLocators.getString("LoginPage.pathLogin")); //$NON-NLS-1$

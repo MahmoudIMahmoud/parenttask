@@ -65,6 +65,7 @@ public class NewEventPage extends PageBase {
 		addRecipient(recipientName);
 		
 		//
+		waitALitle();
 		driver.findElement(replyDate).clear();
 		driver.findElement(replyDate).sendKeys(eventReplyDate);
 		this.waitALitle();

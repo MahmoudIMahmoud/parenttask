@@ -16,7 +16,7 @@ import org.testng.annotations.Parameters;
 public abstract class TestBase {
 
 	protected WebDriver driver;
-	private String siteUrl;
+	protected String siteUrl;
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
@@ -40,6 +40,7 @@ public abstract class TestBase {
 		driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
 
 		//driver.get(url);
+		this.siteUrl=url;
 		innerSetup();
 	}
 

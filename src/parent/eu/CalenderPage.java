@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 
 public class CalenderPage extends PageBase{
 	private By pageCalender=By.cssSelector(".mynews.calendar");
-	private By createEvent = By.cssSelector(".half.first .arrow");
+	private By createEvent = By.xpath("//ul/li/a[.='Create Event']");//By.cssSelector(".half.first .arrow");
 	private By newEvent = By.xpath("//span[@class='darker' and (contains(.,'Ny begivenhed') or contains(.,'New event'))]");
 	private By prev = By.id("prev");
 	private By next = By.id("next");
@@ -23,6 +23,7 @@ public class CalenderPage extends PageBase{
 	
 	public void addNewEvent(){
 		driver.findElement(createEvent).click();
+		waitALitle();
 		driver.findElement(newEvent).click();
 	}
 	public void navigatePrev(){
