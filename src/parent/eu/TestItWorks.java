@@ -59,24 +59,6 @@ public class TestItWorks extends TestBase{
 		assertTrue(calenderPage.isEventPresent(eventTitle.toLowerCase()));
 	}
 	
-	//@Test
-	public void testEventCreated() throws InterruptedException{
-		login.navigateToLogin();
-		login.doLogin("demo@parent.eu", "123456");
-		home.assertAtHomePage();
-		String instituteName = "Institution 1";
-		home.navigateToInstitution(instituteName);
-		Thread.sleep(1000);
-		institutionPage.assertInInstitutionPage(instituteName.toUpperCase());
-		sideMenu.clickMenuByName("calendar");
-		Thread.sleep(1000);
-//		calPage.addNewEvent();
-//		newEventPage.addNewEvent();
-//		Thread.sleep(1000);
-		calenderPage.assertNowInClenderPage();
-		assertTrue(calenderPage.isEventPresent("An Event Title".toLowerCase()));
-	}
-	
 	public static String getFormatedDate(long myTime) {
 		SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MMM/yyyy");
 		String myDate = dateFormatter.format(myTime);
